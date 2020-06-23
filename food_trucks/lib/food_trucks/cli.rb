@@ -1,26 +1,35 @@
 class FoodTrucks::CLI 
   
   def call 
-    puts "Welcome to Baltimore Food Trucks"
+    puts "\nWelcome to Baltimore Food Trucks!\n"
+    puts ""
     get_food_types
-    get_user_food_type
-    #food_type(prefered, vegetarian)
-    #list_prefered
-    #list_vegetarian
-    
+    truck_types
+    get_user_choice
   end 
   
   def get_food_types 
     #to be scraped
-    @types = ["prefered", "savory", "sweet", "vegetarian"]
+    puts "What type of Food Truck would you like to see, 1 or 2?"
+    @types = ["21 Prefered", "Vegetarian"]
   end 
   
-  def get_user_food_type
+  def truck_types
     #get user types 
-    @types.each_with_index { |type,index|
-      puts "#{index + 1}- #{type}"
+    @types.each.with_index(1) { |type,index|
+      puts "#{index}- #{type}"
     }
+  end 
+  
+  def get_user_choice
+    chosen_types = gets.strip
+    #if
+    #end 
     
+  end 
+  
+  def valid_input(input, data)
+    input.to_i <= data.lenght && input.to_i > 0 
   end 
   
 end 
