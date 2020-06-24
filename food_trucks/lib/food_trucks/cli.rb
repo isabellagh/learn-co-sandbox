@@ -11,15 +11,11 @@ class FoodTrucks::CLI
   end 
   
   def get_food_types 
-    #to be scraped
-    #FoodTrucks::Truck.new("21 prefered")
-    #FoodTrucks::Truck.new("vegetarian")
     @types = FoodTrucks::Truck.all
-    
   end 
   
   def truck_types
-    puts "What type of Food Truck would you like to see, 1 or 2?"
+    puts "What type of Food Truck would you like to see, 1, 2 or 3?"
     @types.each.with_index(1) { |type, index|
       puts "#{index}- #{type.name}"
     }
