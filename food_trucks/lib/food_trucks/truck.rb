@@ -11,6 +11,7 @@ class FoodTrucks::Truck
   end 
   
   def self.all
+    FoodTrucks::Scraper.scrape_trucks if @@all.empty?
     @@all
   end 
   

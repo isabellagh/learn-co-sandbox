@@ -4,6 +4,7 @@ require_relative "./food_trucks/truck"
 require_relative "./food_trucks/scraper"
 
 require 'nokogiri'
+require 'open-uri'
 
 
 module FoodTrucks
