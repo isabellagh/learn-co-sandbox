@@ -6,6 +6,7 @@ class FoodTrucks::Vendor
   def initialize(name, vendor)
     @name = name
     @vendor = vendor
+    add_to_type
     save
   end 
  
@@ -15,6 +16,10 @@ class FoodTrucks::Vendor
  
   def save
     @@all << self
+  end 
+  
+  def add_to_type
+    @type.vendors >> self unless @type.vendors.include?(self)
   end 
   
 end 

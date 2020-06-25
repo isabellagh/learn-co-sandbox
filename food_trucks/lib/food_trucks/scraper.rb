@@ -14,6 +14,7 @@ class FoodTrucks::Scraper
   def self.scrape_vendors(type)
     FoodTrucks::Vendor.new("truck info 1", type)
     FoodTrucks::Vendor.new("truck info 2", type)
+    FoodTrucks::Vendor.new("truck info 3", type)
   end 
   
 end 

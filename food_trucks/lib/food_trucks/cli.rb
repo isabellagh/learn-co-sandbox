@@ -29,7 +29,10 @@ class FoodTrucks::CLI
   
   def show_trucks_for(chosen_type)
     type = @types[chosen_type -1]
-    vendors = type.vendors
-      puts "Here are the trucks for #{type.name}:"
+    type.get_vendors
+    puts "Here are the trucks for #{type.name}:"
+    type.vendors.each.with_index(1) do |vendor, index|
+      puts "#{index}- #{vendor.name}"
+    end 
   end 
 end 

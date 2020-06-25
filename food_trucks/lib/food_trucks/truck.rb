@@ -20,8 +20,8 @@ class FoodTrucks::Truck
     @@all << self
   end 
   
-  def vendors
+  def get_vendors
     FoodTrucks::Scraper.scrape_vendors(self) if @vendors.empty?
-    @vendors
   end 
+  
 end 
