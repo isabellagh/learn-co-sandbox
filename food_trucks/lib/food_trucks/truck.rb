@@ -1,7 +1,8 @@
+require "pry"
+
 class FoodTrucks::Truck 
   
-  attr_accessor :name
-  attr_writer :vendors
+  attr_accessor :name, :vendors
   
   @@all = []
   
@@ -16,12 +17,12 @@ class FoodTrucks::Truck
     @@all
   end 
   
-  def save
-    @@all << self
-  end 
-  
   def get_vendors
     FoodTrucks::Scraper.scrape_vendors(self) if @vendors.empty?
+  end 
+  
+  def save
+    @@all << self
   end 
   
 end 

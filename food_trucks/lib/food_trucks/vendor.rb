@@ -1,6 +1,8 @@
+require "pry"
+
 class FoodTrucks::Vendor
   
-  attr_accessor :name #contact, address
+  attr_accessor :name, :truck #info
   @@all = []
   
   def initialize(name, vendor)
@@ -19,7 +21,8 @@ class FoodTrucks::Vendor
   end 
   
   def add_to_type
-    @type.vendors >> self unless @type.vendors.include?(self)
+    @type.vendors << self unless @type.vendors.include?(self)
+    binding.pry
   end 
   
 end 

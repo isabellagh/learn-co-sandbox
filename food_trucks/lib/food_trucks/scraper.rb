@@ -1,3 +1,5 @@
+require "pry"
+
 class FoodTrucks::Scraper
   
   def self.scrape_trucks

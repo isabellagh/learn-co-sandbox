@@ -6,7 +6,7 @@ require_relative "./food_trucks/vendor"
 
 require 'nokogiri'
 require 'open-uri'
-
+require 'pry'
 
 module FoodTrucks
   class Error < StandardError; end

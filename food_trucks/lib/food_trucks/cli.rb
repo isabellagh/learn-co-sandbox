@@ -1,3 +1,5 @@
+require "pry"
+
 class FoodTrucks::CLI 
   
   def call 
