@@ -5,9 +5,9 @@ class FoodTrucks::Vendor
   attr_accessor :name, :truck #info
   @@all = []
   
-  def initialize(name, vendor)
+  def initialize(name, type)
     @name = name
-    @vendor = vendor
+    @type = type
     add_to_type
     save
   end 
@@ -22,7 +22,7 @@ class FoodTrucks::Vendor
   
   def add_to_type
     @type.vendors << self unless @type.vendors.include?(self)
-    binding.pry
+    
   end 
   
 end 
