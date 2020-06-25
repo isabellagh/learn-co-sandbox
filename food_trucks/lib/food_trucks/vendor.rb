@@ -1,17 +1,20 @@
-class FoodTruck::Vendor
-  attr_accessor :name #contact, address
+class FoodTrucks::Vendor
   
+  attr_accessor :name #contact, address
   @@all = []
   
-  def initialize(name)
+  def initialize(name, vendor)
     @name = name
-    @vendors = []
+    @vendor = vendor
     save
+  end 
+ 
+  def self.all
+    @@all
   end 
  
   def save
     @@all << self
   end 
-  
   
 end 

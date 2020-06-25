@@ -21,7 +21,7 @@ class FoodTrucks::Truck
   end 
   
   def vendors
-    FoodTrucks::Scraper.scrape_vendors(self) if @@vendors.empty?
+    FoodTrucks::Scraper.scrape_vendors(self) if @vendors.empty?
     @vendors
   end 
 end 
