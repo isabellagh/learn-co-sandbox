@@ -2,7 +2,7 @@ require "pry"
 
 class FoodTrucks::Vendor
   
-  attr_accessor :name, :truck #info
+   attr_accessor :name, :truck #info
   @@all = []
   
   def initialize(name, type)
@@ -22,7 +22,6 @@ class FoodTrucks::Vendor
   
   def add_to_type
     @type.vendors << self unless @type.vendors.include?(self)
-    
   end 
   
-end 
+end  

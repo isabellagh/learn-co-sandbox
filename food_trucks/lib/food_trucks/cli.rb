@@ -7,7 +7,7 @@ class FoodTrucks::CLI
     puts ""
     get_food_types
     truck_types
-    get_user_choice
+    
   end 
   
   def get_food_types 
@@ -19,10 +19,6 @@ class FoodTrucks::CLI
     @types.each.with_index(1) { |type, index|
       puts "#{index}- #{type.name}"
     }
-  end 
-  
-  def get_user_choice
-    puts ""
     chosen_type = gets.strip.to_i
     show_trucks_for(chosen_type) if valid_input(chosen_type, @types)
   end 
@@ -39,6 +35,12 @@ class FoodTrucks::CLI
     type.vendors.each do |vendor|
      # puts "* #{type.name} *"
      # puts 
+     puts ""
+     puts "|^^^^^^^^|"
+     puts "|  BMORE |__"
+     puts "|_,,_,,__,,,|"
+     puts "``@  @    @"
+     puts ""
     end 
   end 
 end 

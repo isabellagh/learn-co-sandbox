@@ -12,3 +12,5 @@ classes
 - scraper (get the data)
 - cli (interact with the user)
 - 
+
+
