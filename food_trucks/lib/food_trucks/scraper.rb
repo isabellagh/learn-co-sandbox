@@ -10,13 +10,13 @@ class FoodTrucks::Scraper
     food_type.each do |ft|
       name = ft.text
       FoodTrucks::Truck.new(name)
+      
     end 
   end 
   
   def self.scrape_vendors(type)
-    FoodTrucks::Vendor.new("truck info 1", type)
-    FoodTrucks::Vendor.new("truck info 2", type)
-    FoodTrucks::Vendor.new("truck info 3", type)
+    FoodTrucks::Vendor.new("#{}", type)
+   
   end 
   
 end 

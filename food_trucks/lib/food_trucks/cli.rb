@@ -3,7 +3,8 @@ require "pry"
 class FoodTrucks::CLI 
   
   def call 
-    puts "\nWelcome to Baltimore Food Trucks!\n"
+    puts "Welcome to Baltimore Food Trucks!"
+    puts ""
     get_food_types
     truck_types
     get_user_choice
@@ -21,6 +22,7 @@ class FoodTrucks::CLI
   end 
   
   def get_user_choice
+    puts ""
     chosen_type = gets.strip.to_i
     show_trucks_for(chosen_type) if valid_input(chosen_type, @types)
   end 
@@ -32,9 +34,11 @@ class FoodTrucks::CLI
   def show_trucks_for(chosen_type)
     type = @types[chosen_type -1]
     type.get_vendors
-    puts "Here are the trucks for #{type.name}:"
-    type.vendors.each.with_index(1) do |vendor, index|
-      puts "#{index}- #{vendor.name}"
+    puts ""
+    puts "Here are the trucks for #{type.name}!"
+    type.vendors.each do |vendor|
+     # puts "* #{type.name} *"
+     # puts 
     end 
   end 
 end 
