@@ -24,25 +24,30 @@ require "pry"
   def get_user_choice
     puts ""
     chosen_type = gets.strip.to_i
-    show_trucks_for(chosen_type) if valid_input(chosen_type, @types)
+    if valid_input(chosen_type, @types) 
+      show_trucks_for(chosen_type) 
+    else
+      truck_types
+    end 
   end 
   
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i > 0
   end 
   
+  
   def show_trucks_for(chosen_type)
     type = @types[chosen_type -1]
     type.get_vendors
       puts ""
       puts "Here are the trucks for #{type.name}!"
-    type.vendors.each do |vendor|
+    #type.vendors.each do |vendor|
       puts ""
       puts "|^^^^^^^^|"
       puts "|  BMORE |__"
       puts "|_,,_,,__,,,|"
       puts "``@  @    @"
       puts ""
-    end 
+    #end 
   end 
 end 
