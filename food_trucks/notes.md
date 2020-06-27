@@ -13,4 +13,10 @@ classes
 - cli (interact with the user)
 - 
 
+require 'nokogiri'
+require 'open-uri'
+site = "https://roaminghunger.com/food-trucks/md/baltimore/1/"
 
+doc = Nokogiri::HTML(open(site))
+food_type = doc.css(".row .col-sm-4, col-xs-6")
+puts food_type.count
