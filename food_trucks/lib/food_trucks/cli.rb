@@ -1,6 +1,6 @@
 require "pry"
 
-  class FoodTrucks::CLI 
+ class FoodTrucks::CLI 
   
   def call 
     puts "Welcome to Baltimore Food Trucks!"
@@ -27,14 +27,15 @@ require "pry"
     if valid_input(chosen_type, @types) 
       show_trucks_for(chosen_type) 
     else
-      truck_types
+      puts "Sorry, that number is not an option."
+      puts ""
+      call
     end 
   end 
   
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i > 0
   end 
-  
   
   def show_trucks_for(chosen_type)
     type = @types[chosen_type -1]
