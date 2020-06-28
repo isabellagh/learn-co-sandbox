@@ -22,6 +22,7 @@ class FoodTrucks::Vendor
   
   def add_to_type
     @type.vendors << self unless @type.vendors.include?(self)
+    #binding.pry
   end 
   
 end  

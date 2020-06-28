@@ -19,6 +19,7 @@ class FoodTrucks::Truck
   
   def get_vendors
     FoodTrucks::Scraper.scrape_vendors(self) if @vendors.empty?
+    @vendors
   end 
   
   def save
