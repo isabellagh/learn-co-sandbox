@@ -11,12 +11,12 @@ require "pry"
   end 
   
   def get_food_types 
-    @type = FoodTrucks::Truck.all
+    @types = FoodTrucks::Truck.all
   end 
   
   def truck_types
     puts "What type of Food Truck would you like to see, 1, 2 or 3?"
-    @type.each.with_index(1) { |type, index|
+    @types.each.with_index(1) { |type, index|
       puts "#{index}- #{type.name}"
     }
   end 
@@ -24,7 +24,7 @@ require "pry"
   def get_user_choice
     puts ""
     chosen_type = gets.strip.to_i
-    if valid_input(chosen_type, @type) 
+    if valid_input(chosen_type, @types) 
       show_trucks_for(chosen_type) 
     else
       puts ""
@@ -37,13 +37,13 @@ require "pry"
   end 
   
   def show_trucks_for(chosen_type)
-    type = @type[chosen_type -1]
+    type = @types[chosen_type -1]
     type.get_vendors
       puts ""
       puts "Here are the trucks for #{type.name}!"
       #binding.pry
-    type.vendors.each.with_index do |vendor|
-      puts "#{vendor.name}"
+    type.vendors.each.with_index do |vendor, index|
+      #puts "#{index}- #{vendor.name}"
       puts ""
       puts "|^^^^^^^^|            |^^^^^^^^|"
       puts "|  BMORE |__          |  BMORE |__"

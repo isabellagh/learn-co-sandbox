@@ -14,9 +14,9 @@ class FoodTrucks::Scraper
     end 
   end 
   
-  def self.scrape_vendors(type)
-    FoodTrucks::Vendor.new("#{"?"}", type)
-    FoodTrucks::Vendor.new("#{"?"}", type)
+  def self.scrape_vendors(vendor)
+    FoodTrucks::Vendor.new("#{"?"}", vendor)
+    FoodTrucks::Vendor.new("#{"?"}", vendor)
   end 
   
 end 
