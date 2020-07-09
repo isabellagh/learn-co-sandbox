@@ -45,21 +45,22 @@ require "lolize/auto"
       #binding.pry
     #type.vendors.each.with_index do |vendor, index|
       #puts "#{index}- #{vendor.name}"
-      if chosen_type == 1 
+    case chosen_type
+    when 1
       puts ""
       puts "|^^^^^^^^|            |^^^^^^^^|"
       puts "| Savory |__          | Savory |__"
       puts "|_,,_,,__,,,|         |_,,_,,__,,,|"
       puts "``@  @    @           ``@  @    @"
       puts ""
-    elsif chosen_type == 2 
-    puts ""
+    when 2 
+      puts ""
       puts "|^^^^^^^^|            |^^^^^^^^|"
       puts "|  Sweet |__          |  Sweet |__"
       puts "|_,,_,,__,,,|         |_,,_,,__,,,|"
       puts "``@  @    @           ``@  @    @"
       puts ""
-    else chosen_type == 3 
+    when 3 
       puts ""
       puts "|^^^^^^^^|            |^^^^^^^^|"
       puts "| Veggie |__          | Veggie |__"
