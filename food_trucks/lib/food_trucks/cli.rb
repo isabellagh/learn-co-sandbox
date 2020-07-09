@@ -1,4 +1,5 @@
 require "pry"
+require "lolize/auto"
 
  class FoodTrucks::CLI 
   
