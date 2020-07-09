@@ -19,4 +19,4 @@ class FoodTrucks::Scraper
     FoodTrucks::Vendor.new("#{"?"}", vendor)
   end 
   
-end 
+end
