@@ -39,34 +39,13 @@ require "lolize/auto"
   
   def show_trucks_for(chosen_type)
     type = @types[chosen_type -1]
+    puts ""
+    puts "Here are the trucks for #{type.name}!"
     type.get_vendors
-      puts ""
-      puts "Here are the trucks for #{type.name}!"
+      
       #binding.pry
-    #type.vendors.each.with_index do |vendor, index|
-      #puts "#{index}- #{vendor.name}"
-    case chosen_type
-    when 1
-      puts ""
-      puts "|^^^^^^^^|            |^^^^^^^^|"
-      puts "| Savory |__          | Savory |__"
-      puts "|_,,_,,__,,,|         |_,,_,,__,,,|"
-      puts "``@  @    @           ``@  @    @"
-      puts ""
-    when 2 
-      puts ""
-      puts "|^^^^^^^^|            |^^^^^^^^|"
-      puts "|  Sweet |__          |  Sweet |__"
-      puts "|_,,_,,__,,,|         |_,,_,,__,,,|"
-      puts "``@  @    @           ``@  @    @"
-      puts ""
-    when 3 
-      puts ""
-      puts "|^^^^^^^^|            |^^^^^^^^|"
-      puts "| Veggie |__          | Veggie |__"
-      puts "|_,,_,,__,,,|         |_,,_,,__,,,|"
-      puts "``@  @    @           ``@  @    @"
-      puts ""
-    end 
-  end 
+    type.vendors.each.with_index do |vendor, index|
+      puts "#{index}- #{vendor.name}"
+    end
+  end
 end 
