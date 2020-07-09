@@ -39,11 +39,10 @@ require "lolize/auto"
   
   def show_trucks_for(chosen_type)
     type = @types[chosen_type -1]
-    puts ""
     puts "Here are the 21 Best #{type.name} Food Trucks in Baltimore!"
     type.get_vendors
     
-    type.vendors.each.with_index(1) {|vendor, index|
+    type.vendors.each.with_index(1) { |vendor, index|
       puts "#{index}- #{vendor.name}"
     }
   end

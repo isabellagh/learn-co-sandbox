@@ -25,4 +25,4 @@ class FoodTrucks::Vendor
     #binding.pry
   end 
   
-end  
+end   
