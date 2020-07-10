@@ -2,12 +2,12 @@ require "pry"
 
 class FoodTrucks::Vendor
   
-   attr_accessor :name, :truck #info
+  attr_accessor :name, :truck #info
   @@all = []
   
   def initialize(name, type)
     @name = name
-    @type = type
+    @types = types
     add_to_type
     save
   end 
@@ -21,8 +21,7 @@ class FoodTrucks::Vendor
   end 
   
   def add_to_type
-    @type.vendors << self unless @type.vendors.include?(self)
-    #binding.pry
+    @types.vendors << self unless @types.vendors.include?(self)
   end 
   
 end   
