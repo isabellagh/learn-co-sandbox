@@ -1,7 +1,7 @@
 require "pry"
 require "lolize/auto"
 
- class FoodTrucks::CLI 
+class FoodTrucks::CLI 
   
   def call 
     puts "Welcome to Baltimore best Food Trucks!"
@@ -48,8 +48,8 @@ require "lolize/auto"
     puts "Here are the 21 Best #{type.name} Food Trucks in Baltimore!"
     type.get_vendors
     
-    type.vendors.each.with_index(1) { |vendor, index|
-      puts "#{index}- #{vendor.name}"
+    type.vendors.each{ |vendor|
+      puts "#{vendor.name}"
     }
   end
 end 
