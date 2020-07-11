@@ -36,7 +36,8 @@ class FoodTrucks::CLI
       show_vendors_for(chosen_type) 
     else
       puts ""
-      call
+      truck_types
+      get_user_choice
     end 
   end 
   
