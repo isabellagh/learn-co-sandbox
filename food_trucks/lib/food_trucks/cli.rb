@@ -14,6 +14,7 @@ class FoodTrucks::CLI
     get_food_types
     truck_types
     get_user_choice
+    mind_change
   end 
   
   def get_food_types 
@@ -52,4 +53,19 @@ class FoodTrucks::CLI
       puts "#{vendor.name}"
     }
   end
+  
+  def mind_change
+    puts "Would you like to see another food type, yes or no?"
+    input = gets.strip.downcase 
+    case input
+      when "yes"
+        truck_types
+      when "no"
+        puts "Thanks for stoping by!"
+        exit 
+      else
+        mind_change
+    end 
+  end 
+  
 end 
