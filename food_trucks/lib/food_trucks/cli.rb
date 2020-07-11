@@ -4,7 +4,7 @@ require "lolize/auto"
 class FoodTrucks::CLI 
   
   def call 
-    puts "Welcome to Baltimore best Food Trucks!"
+    puts "\nWelcome to Baltimore best Food Trucks!"
       puts ""
       puts "|^^^^^^^^^|     |^^^^^^^^^|     |^^^^^^^^^^|"
       puts "|1.Savory |__   | 2.Sweet |__   | 3.Veggie |__"
@@ -22,7 +22,7 @@ class FoodTrucks::CLI
   end 
   
   def truck_types
-    puts "What type of Food Truck would you like to see: 1, 2 or 3?"
+    puts "What kind of Food Truck would you like to see: 1, 2 or 3?\n"
     puts ""
     @types.each.with_index(1) { |type, index|
       puts "#{index}- #{type.name}"
@@ -47,7 +47,7 @@ class FoodTrucks::CLI
   
   def show_vendors_for(chosen_type)
     type = @types[chosen_type -1]
-    puts "Here are the 21 Best #{type.name} Food Trucks in Baltimore!"
+    puts "\nHere are the 21 Best #{type.name} Food Trucks in Baltimore!\n"
     type.get_vendors
     
     type.vendors.each{ |vendor|
@@ -57,13 +57,13 @@ class FoodTrucks::CLI
   
   def another_type?
     while true
-      puts "Would you like to see another food type, yes or no?"
+      puts "\nWould you like to see another kind of food? Please type yes or no.\n"
     case gets.strip.downcase
       when "yes"
         truck_types
         get_user_choice
       when "no"
-        puts "Thanks for stoping by!"
+        puts "\tThanks for stoping by!"
         exit 
       else
         another_type?
