@@ -60,6 +60,7 @@ class FoodTrucks::CLI
     case input
       when "yes"
         truck_types
+        get_user_choice
       when "no"
         puts "Thanks for stoping by!"
         exit 
