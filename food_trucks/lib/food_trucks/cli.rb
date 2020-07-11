@@ -14,7 +14,7 @@ class FoodTrucks::CLI
     get_food_types
     truck_types
     get_user_choice
-    mind_change
+    another_type?
   end 
   
   def get_food_types 
@@ -55,10 +55,10 @@ class FoodTrucks::CLI
     }
   end
   
-  def mind_change
-    puts "Would you like to see another food type, yes or no?"
-    input = gets.strip.downcase 
-    case input
+  def another_type?
+    while true
+      puts "Would you like to see another food type, yes or no?"
+    case gets.strip.downcase
       when "yes"
         truck_types
         get_user_choice
@@ -66,8 +66,8 @@ class FoodTrucks::CLI
         puts "Thanks for stoping by!"
         exit 
       else
-        mind_change
+        another_type?
+      end 
     end 
   end 
-  
 end 
