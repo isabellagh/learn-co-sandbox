@@ -56,18 +56,17 @@ class FoodTrucks::CLI
   end
   
   def another_type?
-    while true
-      puts "\nWould you like to see another kind of food? Please type yes or no.\n"
-    case gets.strip.downcase
-      when "yes"
-        truck_types
+    puts "\nWould you like to see another kind of food? Please type yes or no.\n"
+    input = gets.strip.downcase
+      if input == "yes"
+        puts "Please type 1, 2, or 3."
         get_user_choice
-      when "no"
-        puts "\tThanks for stoping by!"
-        exit 
+        another_type?
+      elsif input == "no"
+        puts "\t\tThanks for stoping by!"
       else
         another_type?
-      end 
+     
     end 
   end 
 end 
