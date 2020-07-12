@@ -66,7 +66,6 @@ class FoodTrucks::CLI
         puts "\t\tThanks for stoping by!"
       else
         another_type?
-     
     end 
   end 
 end 
