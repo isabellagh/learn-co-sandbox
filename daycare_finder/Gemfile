@@ -1,4 +1,0 @@
-source "https://rubygems.org"
-
-# Specify your gem's dependencies in daycare_finder.gemspec
-gemspec
